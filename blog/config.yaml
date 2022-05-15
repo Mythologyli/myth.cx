@@ -61,7 +61,7 @@ params:
 
     comments:
         enabled: true
-        provider: disqus
+        provider: waline
 
         disqusjs:
             shortname:
@@ -90,19 +90,18 @@ params:
 
         # Waline client configuration see: https://waline.js.org/en/reference/client.html
         waline:
-            serverURL:
-            lang:
+            serverURL: https://waline.blog.myth.cx
+            lang: zh
             visitor:
             avatar:
             emoji:
-                - https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo
+                - https://cdn.jsdelivr.net/gh/walinejs/emojis/tieba
             requiredMeta:
                 - name
                 - email
                 - url
             placeholder:
             locale:
-                admin: Admin
 
         twikoo:
             envId:
