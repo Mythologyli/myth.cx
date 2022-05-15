@@ -11,7 +11,7 @@ languages:
         weight: 1
 
 # Change it to your Disqus shortname before using
-disqusShortname: hugo-theme-stack
+disqusShortname: mythcx
 
 # GA Tracking ID
 googleAnalytics:
@@ -64,7 +64,7 @@ params:
         provider: disqus
 
         disqusjs:
-            shortname: mythcx
+            shortname:
             apiUrl:
             apiKey:
             admin:
@@ -207,7 +207,7 @@ markup:
     goldmark:
         renderer:
             ## Set to true if you have HTML content inside Markdown
-            unsafe: false
+            unsafe: true
     tableOfContents:
         endLevel: 4
         ordered: true
