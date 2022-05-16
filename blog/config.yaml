@@ -14,7 +14,7 @@ languages:
 disqusShortname: mythcx
 
 # GA Tracking ID
-googleAnalytics:
+googleAnalytics: G-SS30WZRHG7
 
 # Theme i18n support
 # Available values: ar, ca, de, el, en, es, fr, id, it, ja, ko, nl, pt-br, th, uk, zh-cn, zh-hk, zh-tw
