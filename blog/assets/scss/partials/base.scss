@@ -8,7 +8,7 @@ html {
 }
 
 body {
-    background-image: url('/background.svg');
+    background-image: var(--body-background-image);
     background-attachment: fixed;
     margin: 0;
     font-family: var(--base-font-family);
