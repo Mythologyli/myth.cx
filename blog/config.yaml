@@ -2,16 +2,16 @@ baseurl: https://myth.cx
 languageCode: zh-cn
 theme: hugo-theme-stack
 paginate: 5
-title: Myth's Blog
+title: Myth's Blog | Myth 的小站
 
 languages:
     zh-cn:
         languageName: 中文
-        title: Myth's Blog
+        title: Myth's Blog | Myth 的小站
         weight: 1
 
 # Change it to your Disqus shortname before using
-disqusShortname: mythcx
+disqusShortname:
 
 # GA Tracking ID
 googleAnalytics: G-SS30WZRHG7
