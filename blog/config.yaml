@@ -186,10 +186,40 @@ menu:
 
     social:
         - identifier: github
-          name: GitHub
+          name: 1-GitHub
           url: https://github.com/Mythologyli
           params:
-              icon: brand-github
+              icon: github-svgrepo-com
+
+        - identifier: bilibili
+          name: 2-Bilibili
+          url: https://live.bilibili.com/21461713
+          params:
+              icon: bilibili-svgrepo-com
+
+        - identifier: twitter
+          name: 3-Twitter
+          url: https://twitter.com/Mythologyli
+          params:
+              icon: twitter-svgrepo-com
+
+        - identifier: weibo
+          name: 4-Weibo
+          url: https://weibo.com/u/5882611553
+          params:
+              icon: sina-weibo-svgrepo-com
+
+        - identifier: netease cloud music
+          name: 5-Netease Cloud Music
+          url: https://music.163.com/#/user/home?id=477487301
+          params:
+              icon: netease-cloud-music-fill-svgrepo-com
+
+        - identifier: zhihu
+          name: 6-Zhihu
+          url: https://www.zhihu.com/people/myth-90-11
+          params:
+              icon: zhihu-circle-svgrepo-com
 
 related:
     includeNewer: true
