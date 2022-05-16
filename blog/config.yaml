@@ -100,8 +100,8 @@ params:
                 - name
                 - email
                 - url
-            placeholder: 无需登录也可以评论哦！
             locale:
+                placeholder: 无需登录也可以评论哦！
 
         twikoo:
             envId:
