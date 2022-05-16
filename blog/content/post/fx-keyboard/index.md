@@ -56,7 +56,7 @@ Surface 的键盘在竞品中算是手感不错的，可没有数字区同样令
 ## 注意事项
 
 + fxKeyboardLink.exe 将自动打开 NumLock
-+ 一旦使用 Zadig 替换了原始驱动程序，您将无法使用 FA-124 连接！如果您想返回原始驱动程序，请仔细阅读[此处](https://github.com/pbatard/libwdi/wiki/FAQ#Help_Zadig_replaced_the_driver_for_the_wrong_device_How_do_I_restore_it)的 Zadig FAQ。您需要知道USB设备为 CESG502
++ 一旦使用 Zadig 替换了原始驱动程序，您将无法使用 FA-124 连接！如果您想返回原始驱动程序，请仔细阅读[此处](https://github.com/pbatard/libwdi/wiki/FAQ#Help_Zadig_replaced_the_driver_for_the_wrong_device_How_do_I_restore_it)的 Zadig FAQ。您需要知道 USB 设备为 CESG502
 + 如果一通操作后，您无法以任何方式将计算器连接到计算机，请尝试通过后面的按钮重新启动计算器
 
 ## 截图
