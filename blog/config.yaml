@@ -95,7 +95,7 @@ params:
             visitor:
             avatar:
             emoji:
-                - https://cdn.jsdelivr.net/gh/walinejs/emojis/tieba
+                - /walinejs/emojis/tieba
             requiredMeta:
                 - name
                 - email
