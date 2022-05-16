@@ -4,6 +4,8 @@ theme: hugo-theme-stack
 paginate: 5
 title: Myth's Blog | Myth 的小站
 
+buildFuture: true
+
 languages:
     zh-cn:
         languageName: 中文
