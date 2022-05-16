@@ -100,7 +100,7 @@ params:
                 - name
                 - email
                 - url
-            placeholder:
+            placeholder: 无需登录也可以评论哦！
             locale:
 
         twikoo:
