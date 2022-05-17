@@ -150,7 +150,7 @@ params:
                   limit: 10
             - type: tag-cloud
               params:
-                  limit: 10
+                  limit: 50
         page:
             - type: toc
 

@@ -52,3 +52,7 @@ buildFuture: true
 {{< /highlight >}}
 
 这样就会将将来的页面也一起渲染。
+
+## 参考资料
+
+[Hugo Post Missing (Hugo 博客文章缺失问题)](https://jdhao.github.io/2020/01/11/hugo_post_missing/) 作者：[jdhao](https://jdhao.github.io/)
