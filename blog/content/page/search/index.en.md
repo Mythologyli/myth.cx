@@ -1,5 +1,5 @@
 ---
-title: 搜索
+title: Search
 aliases:
   - search
 slug: search

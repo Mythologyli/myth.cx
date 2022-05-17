@@ -1,16 +1,323 @@
 baseurl: https://myth.cx
-languageCode: zh-cn
 theme: hugo-theme-stack
 paginate: 5
-title: Myth's Blog | Myth 的小站
 
 buildFuture: true
 
 languages:
     zh-cn:
+        languageCode: zh-cn
         languageName: 中文
         title: Myth's Blog | Myth 的小站
         weight: 1
+
+        params:
+            mainSections:
+                - post
+            featuredImageField: image
+            rssFullContent: true
+            favicon:
+
+            footer:
+                since: 2019
+                customText: 
+
+            dateFormat:
+                published: Jan 02, 2006
+                lastUpdated: Jan 02, 2006 15:04 MST
+
+            sidebar:
+                emoji: ✔️
+                subtitle: 荒唐无聊正经有趣的大学生 | 业余 Minecraft 腐竹 | PTer
+                avatar:
+                    enabled: true
+                    local: true
+                    src: img/avatar.png
+
+            article:
+                math: true
+                toc: true
+                readingTime: true
+                license:
+                    enabled: true
+                    default: Licensed under CC BY-NC-SA 4.0
+
+            comments:
+                enabled: true
+                provider: waline
+
+                disqusjs:
+                    shortname:
+                    apiUrl:
+                    apiKey:
+                    admin:
+                    adminLabel:
+
+                utterances:
+                    repo:
+                    issueTerm: pathname
+                    label:
+
+                remark42:
+                    host:
+                    site:
+                    locale:
+
+                vssue:
+                    platform:
+                    owner:
+                    repo:
+                    clientId:
+                    clientSecret:
+                    autoCreateIssue: false
+
+                # Waline client configuration see: https://waline.js.org/en/reference/client.html
+                waline:
+                    serverURL: https://waline.blog.myth.cx
+                    lang: zh
+                    visitor:
+                    avatar:
+                    emoji:
+                        - /walinejs/emojis/tieba
+                    requiredMeta:
+                        - name
+                        - email
+                        - url
+                    locale:
+                        admin: 博主
+                        placeholder: 无需登录也可以评论哦！
+
+                twikoo:
+                    envId:
+                    region:
+                    path:
+                    lang:
+
+                # See https://cactus.chat/docs/reference/web-client/#configuration for description of the various options
+                cactus:
+                    defaultHomeserverUrl: "https://matrix.cactus.chat:8448"
+                    serverName: "cactus.chat"
+                    siteName: "" # You must insert a unique identifier here matching the one you registered (See https://cactus.chat/docs/getting-started/quick-start/#register-your-site)
+
+                giscus:
+                    repo:
+                    repoID:
+                    category:
+                    categoryID:
+                    mapping:
+                    lightTheme:
+                    darkTheme:
+                    reactionsEnabled: 1
+                    emitMetadata: 0
+
+                gitalk:
+                    owner:
+                    admin:
+                    repo:
+                    clientID:
+                    clientSecret:
+
+                cusdis:
+                    host:
+                    id:
+            widgets:
+                homepage:
+                    - type: search
+                    - type: archives
+                      params:
+                          limit: 5
+                    - type: categories
+                      params:
+                          limit: 10
+                    - type: tag-cloud
+                      params:
+                          limit: 50
+                page:
+                    - type: toc
+
+            opengraph:
+                twitter:
+                    # Your Twitter username
+                    site:
+
+                    # Available values: summary, summary_large_image
+                    card: summary_large_image
+
+            defaultImage:
+                opengraph:
+                    enabled: false
+                    local: false
+                    src:
+
+            colorScheme:
+                # Display toggle
+                toggle: true
+
+                # Available values: auto, light, dark
+                default: auto
+
+            imageProcessing:
+                cover:
+                    enabled: true
+                content:
+                    enabled: true
+
+    en:
+        languageCode: en
+        languageName: English
+        title: Myth's Blog
+        weight: 2
+
+        params:
+            mainSections:
+                - post
+            featuredImageField: image
+            rssFullContent: true
+            favicon:
+
+            footer:
+                since: 2019
+                customText: 
+
+            dateFormat:
+                published: Jan 02, 2006
+                lastUpdated: Jan 02, 2006 15:04 MST
+
+            sidebar:
+                emoji: ✔️
+                subtitle: Embedded Systems, Robotics, Graphing Calculators and Minecraft!
+                avatar:
+                    enabled: true
+                    local: true
+                    src: img/avatar.png
+
+            article:
+                math: true
+                toc: true
+                readingTime: true
+                license:
+                    enabled: true
+                    default: Licensed under CC BY-NC-SA 4.0
+
+            comments:
+                enabled: true
+                provider: waline
+
+                disqusjs:
+                    shortname:
+                    apiUrl:
+                    apiKey:
+                    admin:
+                    adminLabel:
+
+                utterances:
+                    repo:
+                    issueTerm: pathname
+                    label:
+
+                remark42:
+                    host:
+                    site:
+                    locale:
+
+                vssue:
+                    platform:
+                    owner:
+                    repo:
+                    clientId:
+                    clientSecret:
+                    autoCreateIssue: false
+
+                # Waline client configuration see: https://waline.js.org/en/reference/client.html
+                waline:
+                    serverURL: https://waline.blog.myth.cx
+                    lang: en
+                    visitor:
+                    avatar:
+                    emoji:
+                        - /walinejs/emojis/tieba
+                    requiredMeta:
+                        - name
+                        - email
+                        - url
+                    locale:
+                        admin: Admin
+                        placeholder: Login is not required!
+
+                twikoo:
+                    envId:
+                    region:
+                    path:
+                    lang:
+
+                # See https://cactus.chat/docs/reference/web-client/#configuration for description of the various options
+                cactus:
+                    defaultHomeserverUrl: "https://matrix.cactus.chat:8448"
+                    serverName: "cactus.chat"
+                    siteName: "" # You must insert a unique identifier here matching the one you registered (See https://cactus.chat/docs/getting-started/quick-start/#register-your-site)
+
+                giscus:
+                    repo:
+                    repoID:
+                    category:
+                    categoryID:
+                    mapping:
+                    lightTheme:
+                    darkTheme:
+                    reactionsEnabled: 1
+                    emitMetadata: 0
+
+                gitalk:
+                    owner:
+                    admin:
+                    repo:
+                    clientID:
+                    clientSecret:
+
+                cusdis:
+                    host:
+                    id:
+            widgets:
+                homepage:
+                    - type: search
+                    - type: archives
+                      params:
+                          limit: 5
+                    - type: categories
+                      params:
+                          limit: 10
+                    - type: tag-cloud
+                      params:
+                          limit: 50
+                page:
+                    - type: toc
+
+            opengraph:
+                twitter:
+                    # Your Twitter username
+                    site:
+
+                    # Available values: summary, summary_large_image
+                    card: summary_large_image
+
+            defaultImage:
+                opengraph:
+                    enabled: false
+                    local: false
+                    src:
+
+            colorScheme:
+                # Display toggle
+                toggle: true
+
+                # Available values: auto, light, dark
+                default: auto
+
+            imageProcessing:
+                cover:
+                    enabled: true
+                content:
+                    enabled: true
 
 # Change it to your Disqus shortname before using
 disqusShortname:
@@ -29,157 +336,6 @@ hasCJKLanguage: true
 permalinks:
     post: /p/:slug/
     page: /:slug/
-
-params:
-    mainSections:
-        - post
-    featuredImageField: image
-    rssFullContent: true
-    favicon:
-
-    footer:
-        since: 2019
-        customText: 
-
-    dateFormat:
-        published: Jan 02, 2006
-        lastUpdated: Jan 02, 2006 15:04 MST
-
-    sidebar:
-        emoji: ✔️
-        subtitle: 荒唐无聊正经有趣的大学生 | 业余 Minecraft 腐竹 | PTer
-        avatar:
-            enabled: true
-            local: true
-            src: img/avatar.png
-
-    article:
-        math: true
-        toc: true
-        readingTime: true
-        license:
-            enabled: true
-            default: Licensed under CC BY-NC-SA 4.0
-
-    comments:
-        enabled: true
-        provider: waline
-
-        disqusjs:
-            shortname:
-            apiUrl:
-            apiKey:
-            admin:
-            adminLabel:
-
-        utterances:
-            repo:
-            issueTerm: pathname
-            label:
-
-        remark42:
-            host:
-            site:
-            locale:
-
-        vssue:
-            platform:
-            owner:
-            repo:
-            clientId:
-            clientSecret:
-            autoCreateIssue: false
-
-        # Waline client configuration see: https://waline.js.org/en/reference/client.html
-        waline:
-            serverURL: https://waline.blog.myth.cx
-            lang: zh
-            visitor:
-            avatar:
-            emoji:
-                - /walinejs/emojis/tieba
-            requiredMeta:
-                - name
-                - email
-                - url
-            locale:
-                admin: 博主
-                placeholder: 无需登录也可以评论哦！
-
-        twikoo:
-            envId:
-            region:
-            path:
-            lang:
-
-        # See https://cactus.chat/docs/reference/web-client/#configuration for description of the various options
-        cactus:
-            defaultHomeserverUrl: "https://matrix.cactus.chat:8448"
-            serverName: "cactus.chat"
-            siteName: "" # You must insert a unique identifier here matching the one you registered (See https://cactus.chat/docs/getting-started/quick-start/#register-your-site)
-
-        giscus:
-            repo:
-            repoID:
-            category:
-            categoryID:
-            mapping:
-            lightTheme:
-            darkTheme:
-            reactionsEnabled: 1
-            emitMetadata: 0
-
-        gitalk:
-            owner:
-            admin:
-            repo:
-            clientID:
-            clientSecret:
-
-        cusdis:
-            host:
-            id:
-    widgets:
-        homepage:
-            - type: search
-            - type: archives
-              params:
-                  limit: 5
-            - type: categories
-              params:
-                  limit: 10
-            - type: tag-cloud
-              params:
-                  limit: 50
-        page:
-            - type: toc
-
-    opengraph:
-        twitter:
-            # Your Twitter username
-            site:
-
-            # Available values: summary, summary_large_image
-            card: summary_large_image
-
-    defaultImage:
-        opengraph:
-            enabled: false
-            local: false
-            src:
-
-    colorScheme:
-        # Display toggle
-        toggle: true
-
-        # Available values: auto, light, dark
-        default: auto
-
-    imageProcessing:
-        cover:
-            enabled: true
-        content:
-            enabled: true
 
 ### Custom menu
 ### See https://docs.stack.jimmycai.com/configuration/custom-menu.html
