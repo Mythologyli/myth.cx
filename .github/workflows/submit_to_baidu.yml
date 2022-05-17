@@ -23,4 +23,4 @@ jobs:
         run: cd blog && hugo
 
       - name: Submit
-        run: cp blog/public/sitemap.xml scripts && cd scripts && python3 baidu.py sitemap.xml "${{ secrets.BAIDU_API_URL }}"
+        run: cp blog/public/sitemap.xml scripts && cd scripts && pip3 install lxml && python3 baidu.py sitemap.xml "${{ secrets.BAIDU_API_URL }}"
