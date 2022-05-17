@@ -12,7 +12,7 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
     }
 
     --body-background: #f5f5fa;
-    --body-background-image: url('/background.svg');
+    --body-background-image: url('/img/background.svg');
 
     --accent-color: #34495e;
     --accent-color-darker: #2c3e50;
@@ -28,7 +28,7 @@ $defaultTagColors: #fff, #fff, #fff, #fff, #fff;
 
     &[data-scheme="dark"] {
         --body-background: #303030;
-        --body-background-image: url('/background-dark.svg');
+        --body-background-image: url('/img/background-dark.svg');
         --accent-color: #ecf0f1;
         --accent-color-darker: #bdc3c7;
         --accent-color-text: #000;
