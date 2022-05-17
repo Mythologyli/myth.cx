@@ -16,7 +16,13 @@ tags:
 
 ## 机械臂说明与 D-H 参数
 
-ZJU-I 型桌面机械臂为典型的六自由度机械臂。
+ZJU-I 型桌面机械臂为典型的六自由度机械臂。一个机械臂运行的视频：
+
+<video width=100% controls muted>
+    <source src="1.mp4" type="video/mp4">
+    您的浏览器不支持 HTML5 video 标签。
+    Your browser does not support the video tag.  
+</video>
 
 ![](2.png)
 
