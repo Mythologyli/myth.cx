@@ -50,7 +50,7 @@ ZJU-I 型桌面机械臂为典型的六自由度机械臂。一个机械臂运�
 
 我们利用 Mathematica 强大的符号计算功能帮助我们运算，代码为：
 
-{{< highlight mathematica >}}
+```mathematica
 ConvertDh[dh_] :=
     (
         len = Length[dh];
@@ -68,7 +68,7 @@ ConvertDh[dh_] :=
         ];
         FullSimplify[T]
     );
-{{< /highlight >}}
+```
 
 求出变换矩阵为：
 
@@ -114,12 +114,12 @@ $$ t_{44} = 1 $$
 
 例如：
 
-{{< highlight mathematica >}}
+```mathematica {linenos=false}
 In[=] := Import[FileNameJoin[{NotebookDirectory[], "zjui.wl"}]](*导入 zjui.wl*)
 
 In[=] := ForwardKinematicsZJU[{Pi/6, 0, Pi/6, 0, Pi/3, 0}]
 In[=] := {0.0904941, 0.164305, 0.607533, -1.82391, -0.0580453, -2.69295}
-{{< /highlight >}}
+```
 
 ## 逆运动学
 
@@ -127,12 +127,12 @@ In[=] := {0.0904941, 0.164305, 0.607533, -1.82391, -0.0580453, -2.69295}
 
 例如：
 
-{{< highlight mathematica >}}
+```mathematica {linenos=false}
 In[=] := Import[FileNameJoin[{NotebookDirectory[], "zjui.wl"}]](*导入 zjui.wl*)
 
 In[=] := BackwardKinematicsZJU[{0.117, 0.334, 0.499, -2.019, -0.058, -2.190}]
 In[=] := {{1.04692, 0.543234, 0.531454, -0.551512, 0.523909, 0.698541}, {1.04692, 1.05169, -0.531454, 0.00294118, 0.523909, 0.698541}}
-{{< /highlight >}}
+```
 
 ## 开源链接
 

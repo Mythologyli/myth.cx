@@ -31,7 +31,7 @@ tags:
 
 我的 Hugo 仓库目录结构如下：
 
-```
+```shell {linenos=false}
 myth.cx (repo)
   -- ...
   -- blog (hugo)
@@ -48,24 +48,24 @@ myth.cx (repo)
 
 首先，我们需要在 Github Action Ubuntu 环境中配置 Hugo。利用 [actions-hugo](https://github.com/peaceiris/actions-hugo) 配置 Hugo 环境：
 
-{{< highlight yml >}}
+```yml {linenos=false}
 - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: 'latest'
           extended: true
-{{< /highlight >}}
+```
 
 这样，我们就可以在 Actions 中使用 `hugo` 命令：
 
-{{< highlight yml >}}
+```yml {linenos=false}
 - name: Build
         run: cd blog && hugo
-{{< /highlight >}}
+```
 
 这一步后，Hugo 已经为我们生成了 sitemap.xml 文件。利用如下 Python 脚本可以向百度提交链接：
 
-{{< highlight python >}}
+```python
 import sys
 import requests
 import lxml.etree
@@ -112,18 +112,18 @@ if __name__ == '__main__':
     print(urls)
 
     print(submit_to_baidu(sys.argv[2], urls))
-{{< /highlight >}}
+```
 
 该脚本接收两个参数，第一个参数是 sitemap.xml 的路径，第二个参数是百度搜索资源平台的 API 提交地址。对于第一个参数，我们可以直接写在 Github Actions 的 yml 文件中，而第二个参数涉及隐私，使用 Secret 的方式配置。
 
-{{< highlight yml >}}
+```yml {linenos=false}
 - name: Submit
         run: cp blog/public/sitemap.xml scripts && cd scripts && pip3 install lxml && python3 baidu.py sitemap.xml "${{ secrets.BAIDU_API_URL }}"
-{{< /highlight >}}
+```
 
 新建 Secert BAIDU_API_URL，设置为百度搜索资源平台的 API 提交地址，形如 `https://data.zz.baidu.com/urls?site=xxxx&token=xxxx`。最终的完整 yml 文件为：
 
-{{< highlight yml >}}
+```yml {linenos=false}
 name: Submit to Baidu
 
 on: [ push ]
@@ -150,7 +150,7 @@ jobs:
 
       - name: Submit
         run: cp blog/public/sitemap.xml scripts && cd scripts && pip3 install lxml && python3 baidu.py sitemap.xml "${{ secrets.BAIDU_API_URL }}"
-{{< /highlight >}}
+```
 
 ## 开源地址
 

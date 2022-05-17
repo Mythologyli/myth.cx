@@ -64,7 +64,7 @@ tags:
 
 大体的实现思路是利用 syscall 中的 CalculateExpression 函数计算 LISTM[N] 的值，然后在通过对 BCD 编码的转换得到 double 数据
 
-{{< highlight c >}}
+```c
 // Get List col[row] in double format
 // If no data in that grid, return NULL
 double *GetList(int col, int row)
@@ -103,7 +103,7 @@ double *GetList(int col, int row)
     free(bcd_value);
     return double_value;
 }
-{{< /highlight >}}
+```
 
 可以通过这个 demo 理解。
 

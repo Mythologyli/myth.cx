@@ -27,7 +27,7 @@ tags:
    
    例如，以下配置表示：刷新间隔10 min；解析域名为 test.example.com；记录类型为 AAAA (IPv6)；线路为默认线路；TTL 为600；获取 IPv6 地址的方式为 ipconfig（默认）。
 
-{{< highlight json >}}
+```json {linenos=false}
 {
     "Interval": "10",
     "AccessKeyId": "xxxxxx",
@@ -39,6 +39,6 @@ tags:
     "TTL": "600",
     "GetIpUrls": []
 }
-{{< /highlight >}}
+```
 
 4. 执行 Start.bat，DDNS服务应该可以正常运行。

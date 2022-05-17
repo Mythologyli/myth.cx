@@ -15,22 +15,22 @@ tags:
 
 现在是凌晨1点，已经是5月17日了。像下面这样，我创建了一个页面，将时间设置为5月17日：
 
-{{< highlight yaml >}}
+```yaml {linenos=false}
 title: 解决 Hugo 默认时区造成文章/页面不渲染的问题
 description: Hugo 坏啦！为什么无视我新增的页面？
 date: 2022-05-17
-{{< /highlight >}}
+```
 
 然而，浏览器什么变化都没有。
 
 赶快回到终端，查看 `hugo -D server` 的输出：
 
-{{< highlight shell >}}
+```shell {linenos=false}
 Change detected, rebuilding site.
 2022-05-17 01:09:56.287 +0800
 Source changed ".../index.md": WRITE
 Total in 12 ms
-{{< /highlight >}}
+```
 
 诶诶，这不是识别出页面变化了吗？可是为什么不渲染新的页面呢？
 
@@ -47,9 +47,9 @@ Total in 12 ms
 
 我直接采用了简单粗暴的第二种方式。在 config.yaml 中添加：
 
-{{< highlight yaml >}}
+```yaml {linenos=false}
 buildFuture: true
-{{< /highlight >}}
+```
 
 这样就会将将来的页面也一起渲染。
 
