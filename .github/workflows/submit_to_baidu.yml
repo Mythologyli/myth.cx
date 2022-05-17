@@ -19,9 +19,6 @@ jobs:
           hugo-version: 'latest'
           extended: true
 
-      - name: CMake configure
-        run: cmake -DCMAKE_BUILD_TYPE=Release -B build
-
       - name: Build
         run: cd blog && hugo
 
