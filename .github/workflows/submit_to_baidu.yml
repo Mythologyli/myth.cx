@@ -1,0 +1,29 @@
+name: Submit to Baidu
+
+on: [ push ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          submodules: true
+          fetch-depth: 0
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+          extended: true
+
+      - name: CMake configure
+        run: cmake -DCMAKE_BUILD_TYPE=Release -B build
+
+      - name: Build
+        run: cd blog && hugo
+
+      - name: Submit
+        run: cp blog/public/sitemap.xml scripts && cd scripts && python3 baidu.py sitemap.xml "${{ secrets.BAIDU_API_URL }}"

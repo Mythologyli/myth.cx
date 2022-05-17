@@ -1,3 +1,4 @@
+import sys
 import json
 import requests
 import lxml.etree
@@ -20,14 +21,12 @@ def submit_to_baidu(api_url, urls):
     return res.text
 
 
-def get_urls(sitemap_url):
+def get_urls(sitemap_path):
     """
     Get the urls from sitemap
     """
 
-    res = requests.get(sitemap_url)
-
-    tree = lxml.etree.fromstring(res.text.encode('utf-8'))
+    tree = lxml.etree.parse(sitemap_path)
 
     namespaces = {
         'sitemapindex': 'http://www.sitemaps.org/schemas/sitemap/0.9',
@@ -41,10 +40,8 @@ def get_urls(sitemap_url):
 
 
 if __name__ == '__main__':
-    config = json.load(open('./baidu.json', 'r'))
-
-    urls = get_urls(config['sitemap_url'])
+    urls = get_urls(sys.argv[1])
 
     print(urls)
 
-    print(submit_to_baidu(config['api_url'], urls))
+    print(submit_to_baidu(sys.argv[2], urls))
