@@ -1,7 +1,7 @@
 ---
 title: 基于 Mathematica 的六自由度机械臂正/逆运动学分析
 description: 使用 Mathematica 进行 ZJU-I 机械臂正/逆运动学符号计算
-date: 2022-05-17
+date: '2022-05-17T17:45:00'
 slug: zjui-arm-kinematics
 image: 1.png
 categories:
