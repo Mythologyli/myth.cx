@@ -38,7 +38,10 @@ notFound:
         other: Not Found
 
     subtitle:
-        other: This page does not exist
+        other: We can't find the page you want
+
+    message:
+        other: Complain? Leave a message on the message board!
 
 widget:
     archives:

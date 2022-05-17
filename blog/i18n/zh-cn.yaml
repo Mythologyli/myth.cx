@@ -24,7 +24,9 @@ notFound:
     title:
         other: 404 错误
     subtitle:
-        other: "这个页面找不到啦！| Page Not Found"
+        other: 这个页面找不到啦！
+    message:
+        other: 要在留言板抱怨一下吗？
 
 widget:
     archives:
