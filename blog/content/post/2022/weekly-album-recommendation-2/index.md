@@ -3,7 +3,6 @@ title: '每周专辑推荐 X JAPAN - Vanishing Vision'
 description: 
 date: 2022-10-04
 slug: weekly-album-recommendation-2
-image: cover.jpg
 categories:
     - music
 tags:
