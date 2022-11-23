@@ -15,7 +15,9 @@ menu:
 
 > 用 Edge 或 Chrome 打不开视频？
 >
-> 复制 chrome://flags/#block-insecure-private-network-requests 到网址栏，回车并将这一项改为 Disabled，然后右下角重启浏览器。
+> 1. 首先看地址栏左边是一把锁还是一个感叹号。如果是感叹号直接看 3。
+> 2. 点击那把锁，Edge 选择“此网站的权限”，Chrome 选择网站设置，在里面将“不安全的内容”改为允许。检查是否可以播放。如果还是不行进行 3。
+> 3. 复制 chrome://flags/#block-insecure-private-network-requests 到网址栏，回车并将这一项改为 Disabled，然后右下角重启浏览器。
 
 可以使用网页在线观看，也可以将 m3u8 链接复制到 [PotPlayer](https://potplayer.daum.net/?lang=zh_CN) 等播放器观看。
 
