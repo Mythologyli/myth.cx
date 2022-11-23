@@ -29,6 +29,48 @@ menu:
 
 欢迎留言~
 
+## 抖音 1080P
+
+<body>
+  <video
+    id="video1"
+    class="video-js vjs-default-skin vjs-16-9"
+    controls
+    preload="none"
+    data-setup="{}"
+  >
+    <source src="http://worldcup.myth.cx:9898/stream/douyin/out.m3u8" type="application/x-mpegURL" />
+  </video>
+
+  <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
+</body>
+
++ 原地址：
+  [http://mmmitv.top/test/douyin-x.php?id=rand](http://mmmitv.top/test/douyin-x.php?id=rand)
++ 校内转播地址：
+  [http://worldcup.myth.cx:9898/stream/douyin/out.m3u8](http://worldcup.myth.cx:9898/stream/douyin/out.m3u8)
+
+## 咪咕 1080P
+
+<body>
+  <video
+    id="video1"
+    class="video-js vjs-default-skin vjs-16-9"
+    controls
+    preload="none"
+    data-setup="{}"
+  >
+    <source src="http://worldcup.myth.cx:9898/stream/migu/out.m3u8" type="application/x-mpegURL" />
+  </video>
+
+  <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
+</body>
+
++ 原地址：
+  [http://117.136.156.3:80/000000001000/3000000010000005180/index.m3u8](http://117.136.156.3:80/000000001000/3000000010000005180/index.m3u8)
++ 校内转播地址：
+  [http://worldcup.myth.cx:9898/stream/migu/out.m3u8](http://worldcup.myth.cx:9898/stream/migu/out.m3u8)
+
 ## CCTV 5 1080P
 
 <body>
@@ -70,27 +112,6 @@ menu:
   [http://liveop.cctv.cn/hls/CCTV16HD/playlist.m3u8](http://liveop.cctv.cn/hls/CCTV16HD/playlist.m3u8)
 + 校内转播地址：
   [http://worldcup.myth.cx:9898/stream/cctv16/out.m3u8](http://worldcup.myth.cx:9898/stream/cctv16/out.m3u8)
-
-## 抖音 1080P
-
-<body>
-  <video
-    id="video1"
-    class="video-js vjs-default-skin vjs-16-9"
-    controls
-    preload="none"
-    data-setup="{}"
-  >
-    <source src="http://worldcup.myth.cx:9898/stream/douyin/out.m3u8" type="application/x-mpegURL" />
-  </video>
-
-  <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
-</body>
-
-+ 原地址：
-  [http://mmmitv.top/test/douyin-x.php?id=rand](http://mmmitv.top/test/douyin-x.php?id=rand)
-+ 校内转播地址：
-  [http://worldcup.myth.cx:9898/stream/douyin/out.m3u8](http://worldcup.myth.cx:9898/stream/douyin/out.m3u8)
 
 ## 其它
 
