@@ -13,6 +13,10 @@ menu:
             icon: football
 ---
 
+> 用 Edge 或 Chrome 打不开视频？
+>
+> 复制 chrome://flags/#block-insecure-private-network-requests 到网址栏，回车并将这一项改为 Disabled，然后右下角重启浏览器。
+
 可以使用网页在线观看，也可以将 m3u8 链接复制到 [PotPlayer](https://potplayer.daum.net/?lang=zh_CN) 等播放器观看。
 
 注意内网转发只能在校园网环境下使用哦！
