@@ -75,14 +75,10 @@ languages:
                 waline:
                     serverURL: https://waline.blog.myth.cx
                     lang: zh
-                    visitor:
-                    avatar:
                     emoji:
                         - https://myth.cx/walinejs/emojis/tieba
-                    requiredMeta:
-                        - name
-                        - email
-                        - url
+                    commentSorting: lastest
+                    reaction: true
                     locale:
                         admin: 博主
                         placeholder: 无需登录也可以评论哦！
@@ -232,14 +228,10 @@ languages:
                 waline:
                     serverURL: https://waline.blog.myth.cx
                     lang: en
-                    visitor:
-                    avatar:
                     emoji:
                         - https://myth.cx/walinejs/emojis/tieba
-                    requiredMeta:
-                        - name
-                        - email
-                        - url
+                    commentSorting: lastest
+                    reaction: true
                     locale:
                         admin: Admin
                         placeholder: Login is not required!
