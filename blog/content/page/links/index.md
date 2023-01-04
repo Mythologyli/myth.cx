@@ -7,7 +7,7 @@ links:
     website: https://github.com/Mythologyli
     image: github-svgrepo-com.svg
 
-  - title: Akashic Server
+  - title: Akashic MC
     description: 由我维护的纯净生存 Minecraft 公益服务器
     website: https://mc.akashic.cc
     image: https://mc.akashic.cc/wp-content/uploads/2020/10/server-icon-150x150.jpg
