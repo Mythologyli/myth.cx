@@ -70,41 +70,37 @@ ConvertDh[dh_] :=
 
 求出变换矩阵为：
 
-![](https://latex.codecogs.com/svg.image?\left[\begin{array}{cccc}-c_{6}\left(c_{5}&space;s_{1}&plus;c_{1}&space;c_{234}&space;s_{5}\right)&plus;c_{1}&space;s_{234}&space;s_{6}&space;&&space;c_{5}&space;s_{1}&space;s_{6}&plus;c_{1}\left(c_{6}&space;s_{234}&plus;c_{234}&space;s_{5}&space;s_{6}\right)&space;&&space;c_{1}&space;c_{234}&space;c_{5}-s_{1}&space;s_{5}&space;&&space;c_{1}\left(0.0855&space;c_{234}&space;c_{5}&plus;0.185&space;s_{2}&plus;0.17&space;s_{23}&plus;0.077&space;s_{234}\right)&plus;s_{1}\left(-0.023-0.0855&space;s_{5}\right)&space;\\c_{1}&space;c_{5}&space;c_{6}&plus;s_{1}\left(-c_{234}&space;c_{6}&space;s_{5}&plus;s_{234}&space;s_{6}\right)&space;&&space;c_{6}&space;s_{1}&space;s_{234}&plus;\left(-c_{1}&space;c_{5}&plus;c_{234}&space;s_{1}&space;s_{5}\right)&space;s_{6}&space;&&space;c_{234}&space;c_{5}&space;s_{1}&plus;c_{1}&space;s_{5}&space;&&space;s_{1}\left(0.0855&space;c_{234}&space;c_{5}&plus;0.185&space;s_{2}&plus;0.17&space;s_{23}&plus;0.077&space;s_{234}\right)&plus;c_{1}\left(0.023&plus;0.0855&space;s_{5}\right)&space;\\c_{6}&space;s_{234}&space;s_{5}&plus;c_{234}&space;s_{6}&space;&&space;c_{234}&space;c_{6}-s_{234}&space;s_{5}&space;s_{6}&space;&&space;-c_{5}&space;s_{234}&space;&&space;0.23&plus;0.185&space;c_{2}&plus;0.17&space;c_{23}&plus;0.077&space;c_{234}-0.0855&space;c_{5}&space;s_{234}&space;\\0&space;&&space;0&space;&&space;0&space;&&space;1\end{array}\right])
+$$
+\left[\begin{array}{cccc}
+-c_6\left(c_5 s_1+c_1 c_{234} s_5\right)+c_1 s_{234} s_6 & c_5 s_1 s_6+c_1\left(c_6 s_{234}+c_{234} s_5 s_6\right) & c_1 c_{234} c_5-s_1 s_5 & c_1\left(0.0855 c_{234} c_5+0.185 s_2+0.17 s_{23}+0.077 s_{234}\right)+s_1\left(-0.023-0.0855 s_5\right) \\\
+c_1 c_5 c_6+s_1\left(-c_{234} c_6 s_5+s_{234} s_6\right) & c_6 s_1 s_{234}+\left(-c_1 c_5+c_{234} s_1 s_5\right) s_6 & c_{234} c_5 s_1+c_1 s_5 & s_1\left(0.0855 c_{234} c_5+0.185 s_2+0.17 s_{23}+0.077 s_{234}\right)+c_1\left(0.023+0.0855 s_5\right) \\\
+c_6 s_{234} s_5+c_{234} s_6 & c_{234} c_6-s_{234} s_5 s_6 & -c_5 s_{234} & 0.23+0.185 c_2+0.17 c_{23}+0.077 c_{234}-0.0855 c_5 s_{234} \\\
+0 & 0 & 0 & 1
+\end{array}\right]
+$$
 
 写得方便看一点：
 
-$$ t_{11} = -c_{6}\left(c_{5} s_{1}+c_{1} c_{234} s_{5}\right)+c_{1} s_{234} s_{6} $$
-
-$$ t_{12} = c_{5} s_{1} s_{6}+c_{1}\left(c_{6} s_{234}+c_{234} s_{5} s_{6}\right) $$
-
-$$ t_{13} = c_{1} c_{234} c_{5}-s_{1} s_{5} $$
-
-$$ t_{14} = c_{1}\left(0.0855 c_{234} c_{5}+0.185 s_{2}+0.17 s_{23}+0.077 s_{234}\right)+s_{1}\left(-0.023-0.0855 s_{5}\right) $$
-
-$$ t_{21} = c_{1} c_{5} c_{6}+s_{1}\left(-c_{234} c_{6} s_{5}+s_{234} s_{6}\right) $$
-
-$$ t_{22} = c_{6} s_{1} s_{234}+\left(-c_{1} c_{5}+c_{234} s_{1} s_{5}\right) s_{6} $$
-
-$$ t_{23} = c_{234} c_{5} s_{1}+c_{1} s_{5} $$
-
-$$ t_{24} = s_{1}\left(0.0855 c_{234} c_{5}+0.185 s_{2}+0.17 s_{23}+0.077 s_{234}\right)+c_{1}\left(0.023+0.0855 s_{5}\right) $$
-
-$$ t_{31} = c_{6} s_{234} s_{5}+c_{234} s_{6} $$
-
-$$ t_{32} = c_{234} c_{6}-s_{234} s_{5} s_{6} $$
-
-$$ t_{33} = -c_{5} s_{234} $$
-
-$$ t_{34} = 0.23+0.185 c_{2}+0.17 c_{23}+0.077 c_{234}-0.0855 c_{5} s_{234} $$
-
-$$ t_{41} = 0 $$
-
-$$ t_{42} = 0 $$
-
-$$ t_{43} = 0 $$
-
-$$ t_{44} = 1 $$
+$$
+\begin{aligned}
+t_{11} &= -c_{6}\left(c_{5} s_{1}+c_{1} c_{234} s_{5}\right)+c_{1} s_{234} s_{6} \\\
+t_{12} &= c_{5} s_{1} s_{6}+c_{1}\left(c_{6} s_{234}+c_{234} s_{5} s_{6}\right) \\\
+t_{13} &= c_{1} c_{234} c_{5}-s_{1} s_{5} \\\
+t_{14} &= c_{1}\left(0.0855 c_{234} c_{5}+0.185 s_{2}+0.17 s_{23}+0.077 s_{234}\right)+s_{1}\left(-0.023-0.0855 s_{5}\right) \\\
+t_{21} &= c_{1} c_{5} c_{6}+s_{1}\left(-c_{234} c_{6} s_{5}+s_{234} s_{6}\right) \\\
+t_{22} &= c_{6} s_{1} s_{234}+\left(-c_{1} c_{5}+c_{234} s_{1} s_{5}\right) s_{6} \\\
+t_{23} &= c_{234} c_{5} s_{1}+c_{1} s_{5} \\\
+t_{24} &= s_{1}\left(0.0855 c_{234} c_{5}+0.185 s_{2}+0.17 s_{23}+0.077 s_{234}\right)+c_{1}\left(0.023+0.0855 s_{5}\right) \\\
+t_{31} &= c_{6} s_{234} s_{5}+c_{234} s_{6} \\\
+t_{32} &= c_{234} c_{6}-s_{234} s_{5} s_{6} \\\
+t_{33} &= -c_{5} s_{234} \\\
+t_{34} &= 0.23+0.185 c_{2}+0.17 c_{23}+0.077 c_{234}-0.0855 c_{5} s_{234} \\\
+t_{41} &= 0 \\\
+t_{42} &= 0 \\\
+t_{43} &= 0 \\\
+t_{44} &= 1
+\end{aligned}
+$$
 
 ## 正运动学
 
