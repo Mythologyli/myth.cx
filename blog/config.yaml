@@ -315,7 +315,7 @@ languages:
 disqusShortname:
 
 # GA Tracking ID
-googleAnalytics: G-SS30WZRHG7
+googleAnalytics:
 
 # Theme i18n support
 # Available values: ar, ca, de, el, en, es, fr, id, it, ja, ko, nl, pt-br, th, uk, zh-cn, zh-hk, zh-tw
