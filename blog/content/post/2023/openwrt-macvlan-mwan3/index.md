@@ -252,13 +252,13 @@ MWAN3 的通知功能可以在接口失败时运行用户自定义的脚本。�
 
 4. 测试是否能利用脚本完成认证：
 
-   `python3 mwan3.py eth0mac0 disconnected`
+   `python3 mwan3.py wan1 eth0mac0 disconnected`
 
    如显示成功，则说明脚本配置无误。修改 eth0mac0，完成所有 MacVLAN 接口的网页认证。
 
 5. 点击网络-MultiWAN 管理器-通知。在输入框最后一行添加：
 
-   `/usr/bin/python3 /root/mwan3.py $DEVICE $ACTION`
+   `/usr/bin/python3 /root/mwan3.py $INTERFACE $DEVICE $ACTION`
 
    之后保存并应用。
 
