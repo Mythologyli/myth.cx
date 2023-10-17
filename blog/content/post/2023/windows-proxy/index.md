@@ -46,7 +46,7 @@ tags:
 
 我们回到设置 - 网络和 Internet - 代理中，将端口从 7890 改成 7891，然后再看看注册表：`ProxyServer` 变了，`DefaultConnectionSettings` 也变了。此时浏览器也无法正常上网。看来在设置中的修改会同时影响这两个。
 
-那么，浏览器上网的代理到底由哪个觉得呢？我们直接在注册表修改 `DefaultConnectionSettings`，将端口改回 7890，此时浏览器又可以正常上网了。看来 `DefaultConnectionSettings` 决定浏览器上网的代理。
+那么，浏览器上网的代理到底由哪个决定呢？我们直接在注册表修改 `DefaultConnectionSettings`，将端口改回 7890，此时浏览器又可以正常上网了。看来 `DefaultConnectionSettings` 决定浏览器上网的代理。
 
 实际上，`DefaultConnectionSettings` 对应着 Internet 属性 - 连接 - 局域网设置，这是从古老的 IE 那里流传下来的设置界面——即使现在 IE 已经没了但这个界面还在控制面板里。
 
@@ -62,7 +62,7 @@ tags:
 
 ![](5.png)
 
-首先，`ProxyServer` 和 `ProxyOverride` 消失了，只有 `ProxyServer` 还在，但是值是 0——这和说好的不一样啊，设置里代理不是启用状态吗？再看 `DefaultConnectionSettings`，这个好像比较正常（此时在设置里更改还是可以改变 DefaultConnectionSettings 的值），但是不生效。不过，仔细看看 `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Connections`，原因显而易见了：
+首先，`ProxyServer` 和 `ProxyOverride` 消失了，只有 `ProxyEnable` 还在，但是值是 0——这和说好的不一样啊，设置里代理不是启用状态吗？再看 `DefaultConnectionSettings`，这个好像比较正常（此时在设置里更改还是可以改变 DefaultConnectionSettings 的值），但是不生效。不过，仔细看看 `HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Internet Settings\Connections`，原因显而易见了：
 
 ![](6.png)
 
