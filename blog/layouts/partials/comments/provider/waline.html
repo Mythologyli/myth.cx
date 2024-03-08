@@ -1,6 +1,4 @@
-<script src='//unpkg.com/@waline/client@v2/dist/waline.js'></script>
-<link href='//unpkg.com/@waline/client@v2/dist/waline.css' rel='stylesheet' />
-<link href="//unpkg.com/@waline/client@v2/dist/waline-meta.css" rel="stylesheet" />
+<link href='//unpkg.com/@waline/client@v3/dist/waline.css' rel='stylesheet' />
 <div id="waline" class="waline-container"></div>
 <style>
     .waline-container {
@@ -30,8 +28,9 @@
     {{- end -}}
 {{- end -}}
 
-<script>
-    /// Waline client configuration see: https://waline.js.org/en/reference/client.html
-    Waline.init({{ $config | jsonify | safeJS }});
-</script>
+<script type="module">
+    import { init } from 'https://unpkg.com/@waline/client@v3/dist/waline.js';
+
+    init({{ $config | jsonify | safeJS }});
+  </script>
 {{- end -}}
