@@ -15,7 +15,7 @@ tags:
 
 由于学校校园网 Wi-Fi 最近支持了 IPv6/IPv4 双栈连接，笔记本终于可以离开网线接入 IPv6 网络了。因为我有在阿里云购买的域名，所以做了 AAAA 解析记录，可以愉快地用域名远程连接笔记本，再也不需要通过服务器中转 RDP。可是学校分配的 IPv6 时不时会发生改变，而一遍遍在阿里云控制台更改太麻烦，于是想到能不能在 Windows 上实现阿里云 DNS 动态解析服务。
 
-在一番搜索后，在 Github 上找到了 [AliyunDdnsCSharp](https://github.com/xuchao1213/AliyunDdnsCSharp) 这个项目，完美地解决了我的问题。感谢项目作者 [xuchao1213]((https://github.com/xuchao1213)！
+在一番搜索后，在 Github 上找到了 [AliyunDdnsCSharp](https://github.com/xuchao1213/AliyunDdnsCSharp) 这个项目，完美地解决了我的问题。感谢项目作者 [xuchao1213](https://github.com/xuchao1213)！
 
 下面是个人实践的安装方法：
 
