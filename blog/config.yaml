@@ -1,6 +1,7 @@
 baseurl: https://myth.cx
 theme: hugo-theme-stack
-paginate: 5
+pagination:
+    pagerSize: 5
 
 buildFuture: true
 
