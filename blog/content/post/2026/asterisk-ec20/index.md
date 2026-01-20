@@ -267,7 +267,7 @@ password=YourStrongPassword ; 请修改为强密码
 
 [1001]
 type=aor
-max_contacts=1
+max_contacts=10
 ```
 
 这里我们创建了一个 SIP 账号，后续我们将把 EC20 模块的来电转发到该账号，并将该账号拨出的电话通过 EC20 模块拨出。
@@ -416,7 +416,84 @@ sudo systemctl restart asterisk
 
 ## 网络代理
 
-待更新。
+### 固定网卡名称
+
+由于 EC20 并没有内置固定 MAC 地址，导致每次重新插入后，Ubuntu 会按照随机生成的 MAC 地址创建不同的网卡名称，给后续配置带来麻烦。我们可以通过 `udev` 规则固定网卡名称。
+
+首先查看 EC20 的 `idVendor` 和 `idProduct`。运行 `sudo lsusb`：
+
+```bash
+Bus 001 Device 005: ID 2c7c:0125 Quectel Wireless Solutions Co., Ltd. EC25 LTE modem
+```
+
+创建 `/etc/udev/rules.d/70-ec20-net.rules` 文件，添加以下内容：
+
+```ini
+SUBSYSTEM=="net", ACTION=="add", ATTRS{idVendor}=="2c7c", ATTRS{idProduct}=="0125", NAME="ec20"
+```
+
+运行 `sudo udevadm control --reload` 重载规则。重新插入 EC20 模块后，运行 `ip a`，可以看到网卡名称已经变为 `ec20`。
+
+### 配置静态地址、路由和度量值
+
+EC20 模块的网络接口默认使用 DHCP 获取地址。为了方便配置，我们可以为其设置静态 IP 地址。编辑 `/etc/netplan/01-network-manager-all.yaml`，添加以下内容：
+
+```yaml
+# Let NetworkManager manage all devices on this system
+network:
+  version: 2
+  renderer: NetworkManager
+  ethernets:
+    ec20:
+      dhcp4: false
+      addresses: [192.168.225.2/24]
+      routes:
+        - to: 0.0.0.0/0
+          via: 192.168.225.1
+          metric: 999
+      nameservers:
+        addresses: [192.168.225.1]
+```
+
+我们在这里设置一个较大的路由度量值，确保默认路由不通过 EC20 模块。保存后运行 `sudo netplan apply` 应用配置。
+
+### 搭建 SOCKS5 代理服务器
+
+理想情况下，应该通过 Linux 网络命名空间来隔离 EC20 的网络流量，不过配置较为复杂。于是笔者使用 Go 语言编写了一个简单的 SOCKS5 代理服务器，将流量绑定在 EC20 网卡，并使用 `192.168.225.1` 作为 DNS 服务器。
+
+项目地址：[Mythologyli/go-socks5-server](https://github.com/Mythologyli/go-socks5-server)。读者可以在仓库中下载编译好的二进制文件，或者自行编译。
+
+之后，运行 `sudo ./go-socks5-server -bind=":10800" -dns="192.168.225.1:53" -iface=ec20`，即可启动 SOCKS5 代理服务器。
+
+使用 `curl --socks5 127.0.0.1:10800 http://ip-api.com` 测试代理是否工作正常。笔者这里使用了 eight 电话卡：
+
+```json
+{
+  "status"       : "success",
+  "continent"    : "Asia",
+  "continentCode": "AS",
+  "country"      : "Singapore",
+  "countryCode"  : "SG",
+  "region"       : "02",
+  "regionName"   : "North East",
+  "city"         : "Singapore",
+  "district"     : "Ang Mo Kio",
+  "zip"          : "560629",
+  "lat"          : 1.38028,
+  "lon"          : 103.84,
+  "timezone"     : "Asia/Singapore",
+  "offset"       : 28800,
+  "currency"     : "SGD",
+  "isp"          : "STARHUB-MOBILE",
+  "org"          : "",
+  "as"           : "AS4657 StarHub Ltd",
+  "asname"       : "STARHUB-INTERNET",
+  "mobile"       : true,
+  "proxy"        : false,
+  "hosting"      : false,
+  "query"        : "117.20.x.x"
+}
+```
 
 ## 参考资料及致谢
 
